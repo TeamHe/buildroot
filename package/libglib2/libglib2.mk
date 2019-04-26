@@ -91,15 +91,16 @@ LIBGLIB2_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -marm"
 endif
 
 HOST_LIBGLIB2_CONF_OPTS = \
-	--disable-coverage \
-	--disable-dtrace \
-	--disable-fam \
-	--disable-libelf \
-	--disable-selinux \
-	--disable-systemtap \
-	--disable-xattr \
 	--with-pcre=system
 
+#	--disable-selinux \
+#	--disable-systemtap \
+#	--disable-xattr \
+#	--disable-libelf \
+#	--disable-fam \
+#	--disable-coverage \
+#	--disable-dtrace \
+#
 LIBGLIB2_DEPENDENCIES = \
 	host-pkgconf host-libglib2 \
 	libffi pcre util-linux zlib $(TARGET_NLS_DEPENDENCIES)
